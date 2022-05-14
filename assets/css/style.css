@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::after,
+*::before {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--clr-very-light-gray);
+}
+
+footer .attribution {
+  text-align: center;
+}
+footer .attribution a {
+  color: var(--clr-bright-orange);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+button {
+  border: 0.15rem solid var(--clr-very-light-gray);
+  border-radius: 1.5rem;
+  color: inherit;
+  padding: 0.75rem 1.75rem;
+}
+button:hover {
+  background-color: transparent;
+  color: var(--clr-very-light-gray);
+  cursor: pointer;
+}
+
+#_app {
+  margin: 10vh auto 5rem;
+  max-width: 85%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  margin-inline: auto;
+  max-width: 60rem;
+}
+@media (min-width: 65em) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.card {
+  --card-theme: hsl(213, 5%, 39%);
+  background-color: var(--card-theme);
+  color: var(--clr-transparent-white);
+  max-width: 25.625rem;
+}
+.card:first-child {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+@media (min-width: 65em) {
+  .card:first-child {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.75rem;
+  }
+}
+.card:last-child {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+@media (min-width: 65em) {
+  .card:last-child {
+    border-top-right-radius: 0.75rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0.75rem;
+  }
+}
+.card__img {
+  margin: 3.5rem 3.5rem 2rem;
+}
+.card__title {
+  margin: 2rem 3.5rem;
+}
+.card__title h1 {
+  color: var(--clr-very-light-gray);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.card__text {
+  margin: 2rem 3.5rem;
+}
+.card__text p {
+  line-height: 1.75;
+}
+.card__button {
+  color: var(--card-theme);
+  margin: 2rem 3.5rem 3rem;
+}
+@media (min-width: 65em) {
+  .card__button {
+    margin-top: 5rem;
+  }
+}
+.card--orange {
+  --card-theme: var(--clr-bright-orange);
+}
+.card--dark-cyan {
+  --card-theme: var(--clr-dark-cyan);
+}
+.card--very-dark-cyan {
+  --card-theme: var(--clr-very-dark-cyan);
+}
+
+/*# sourceMappingURL=style.css.map */
