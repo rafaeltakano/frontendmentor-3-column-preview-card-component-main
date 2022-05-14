@@ -44,11 +44,13 @@ button {
   border-radius: 1.5rem;
   color: inherit;
   padding: 0.75rem 1.75rem;
+  transition: 400ms ease;
 }
 button:hover {
   background-color: transparent;
   color: var(--clr-very-light-gray);
   cursor: pointer;
+  transition: 400ms ease;
 }
 
 #_app {
